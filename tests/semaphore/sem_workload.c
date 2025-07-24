@@ -57,7 +57,7 @@ no_task_retval_t sem_initialize_test(no_task_argument_t args)
 			BASE_PRIO /* receiver is the high priority task. */
 		);
 
-	for (i < 0 ; i < NB_WORKLOAD_TASK; i++)
+	for (i = 0 ; i < NB_WORKLOAD_TASK; i++)
 	{
 		workload_tasks_name[i][0] = 65;
 		workload_tasks_name[i][1] = (65 + i) % 255;
@@ -111,7 +111,7 @@ no_task_retval_t receiver(no_task_argument_t args)
 
 no_task_retval_t workload_task(no_task_argument_t args)
 {
-	int32_t i;
+	int32_t i = 0;
 	unsigned long _workload_results[100];
 
 	while (1)
