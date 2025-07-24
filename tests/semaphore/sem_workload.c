@@ -112,7 +112,7 @@ no_task_retval_t receiver(no_task_argument_t args)
 no_task_retval_t workload_task(no_task_argument_t args)
 {
 	int32_t i;
-	unsigned long _workload_results[100];
+	volatile unsigned long _workload_results[100];
 
 	while (1)
 	{

@@ -120,7 +120,7 @@ no_task_retval_t workload_task(no_task_argument_t args)
 {
 	int32_t i;
 	int32_t j;
-	unsigned long _workload_results[100];
+	volatile unsigned long _workload_results[100];
 
 	while (1)
 	{

@@ -44,7 +44,7 @@ no_task_retval_t task(no_task_argument_t args)
 	DECLARE_TIME_COUNTERS(no_time_t, inc);
 	DECLARE_TIME_COUNTERS(no_time_t, dec);
 	DECLARE_TIME_STATS(int64_t);
-	unsigned long _workload_results[NB_ITER];
+	volatile unsigned long _workload_results[NB_ITER];
 
 	/* 1b - Measure semaphore signaling time */
 	for (i = 0; i < NB_ITER; i++)
